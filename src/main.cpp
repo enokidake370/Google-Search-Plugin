@@ -24,6 +24,7 @@ WUPS_USE_STORAGE("Search plugin");
 #define ENABLED_CONFIG_STRING                     "enabled"
 
 #define URL "https://www.google.com/"
+#define URL2 "https://www.google.com/"
 
 
 bool enabled = true;
@@ -155,8 +156,8 @@ if (!enabled) {
     // Check for button combo to power off
     if ((buffer->hold & buttonComboPowerOff) == buttonComboPowerOff) {
         SysAppBrowserArgs args = {0};
-        args.url = URL;
-        args.urlSize = strlen(URL);
+        args.url = URL2;
+        args.urlSize = strlen(URL2);
 
         SYSSwitchToBrowserForViewer(&args);
     }
